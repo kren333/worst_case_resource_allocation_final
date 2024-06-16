@@ -14,7 +14,7 @@ To create a Conda environment with all dependencies installed, simply run
 source install.sh
 ```
 
-and then run
+The environment SPODR should now be activated; if this is not the case run
 
 ```
 conda activate SPODR
