@@ -39,7 +39,17 @@ The process of reusing the pretrained predictive models can also be accomplished
 
 ### Experiment Running
 
-Once the models have been run, the following commands will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
+After the above scripts have been run, the following command will run all experiments and output the results inside the folders "_final_results_ci", "efficiency_experiments", and "paper_visualizations" under the root directory:
+
+```
+./run_all.sh
+```
+
+Read below for a more detailed description of each of the subtasks involved in our experiments, should you decide to run experiments one-at-a-time *as opposed* to simply running run_all.sh.
+
+#### Replicating Individual Experiments
+
+Once the models have been run, the following commands (which can be run in any order) will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
 
 ```
 ./binary_experiments.sh
