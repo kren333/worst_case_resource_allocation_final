@@ -12,7 +12,6 @@ import math
 import json
 import time
 from tqdm import tqdm
-import pdb
 from torch import nn
 from folktables_abcmodule import optModule
 from folktables_spoplus import SPOPlus
