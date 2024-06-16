@@ -1,0 +1,4 @@
+binary_final_results/__pycache__/*
+regression_final_results/__pycache__/*
+covid_grids.py
+_final_results_ci/*
