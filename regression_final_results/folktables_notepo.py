@@ -11,8 +11,6 @@ import json
 from torch.utils.data import TensorDataset, DataLoader
 from torch import nn
 from tqdm import tqdm
-import pdb
-# from utils import LogisticRegressionEmployment, NeuralNetworkIncome
 warnings.filterwarnings('ignore')
 
 class NeuralNetworkIncome(nn.Module):    
@@ -148,8 +146,6 @@ if __name__ == "__main__":
         losses.append(float(loss))
 
         test_preds = predmodel(torch.unsqueeze(torch.tensor(X_test), 0).type(torch.float32))[0] # TODO predict + save results on the test set
-        # pdb.set_trace()
-        # if epoch == num_epochs - 1: pdb.set_trace()
 
         if epoch % 5 == 0 or epoch == num_epochs - 1:
             torch.save(predmodel, "{}/{}.pt".format(filename, filename))
