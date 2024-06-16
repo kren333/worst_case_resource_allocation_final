@@ -239,7 +239,6 @@ def loss_cross_entropy(df, predmodel):
     res = np.mean(1/np.log2(df[:,0]))
     if res > 0:
         print(f"bad ce {res}")
-        # pdb.set_trace()
     # if res < -1: print(f"bad ce {res}")
     return res / 100
 

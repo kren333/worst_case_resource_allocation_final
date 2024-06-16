@@ -7,7 +7,6 @@ import pickle
 import gc
 from collections import defaultdict
 import os
-import pdb
 
 plt.rc("axes",titlesize=20)
 plt.rc("axes",labelsize=20)
@@ -43,7 +42,6 @@ if __name__ == "__main__":
                 ests_wrt_sample_size = agg_results_grid[task][loss_fn]
                 ref = final_objs_grid[task][loss_fn]
                 if loss_fn != "ce": 
-                    pdb.set_trace()
                     ests_wrt_sample_size = [x / ref for x in ests_wrt_sample_size]
                 else: ests_wrt_sample_size = [ref / x for x in ests_wrt_sample_size]
 
