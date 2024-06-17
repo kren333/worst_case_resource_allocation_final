@@ -26,7 +26,7 @@ to activate the environment.
 
 ### Predictive Model Training
 
-To replicate our experiments, all trained predictive models must be placed and unzipped in the proper directories. This can either be done by training them directly by commenting out "--no_train" in the binary_experiments.sh and regression_experiments.sh files, or using the provided zip files in the root directory. To exercise the second option:
+To replicate our experiments, all trained predictive models must be placed and unzipped in the proper directories. This can either be done by training them directly by commenting out "--no_train" in the binary_experiments.sh and regression_experiments.sh files, or using the provided zip files in the root directory. To exercise the second option, run the command below. Otherwise (training predictive models from scratch), skip this step.
 
 - move the "binary_final_results_models.zip" into the "binary_final_results" folder and unzip
 - move the "regression_final_results_models.zip" into the "regression_final_results" folder and unzip
