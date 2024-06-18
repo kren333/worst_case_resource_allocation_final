@@ -22,7 +22,7 @@ if __name__ == "__main__":
     train = args.no_train
     print(f"Training Models: {train}")
 
-    states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+    states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"][:5]
     
     # make sure all data downloaded
     run_single_experiment("python download_states.py")
@@ -54,23 +54,11 @@ if __name__ == "__main__":
     
     fns = "knapsack.top-k.util.fair.mse"
 
-    model_str1 = ".".join(income_model_names[:20])
-    model_str2 = ".".join(income_model_names[20:40])
-    model_str3 = ".".join(income_model_names[40:60])
-    model_str4 = ".".join(income_model_names[60:80])
-    model_str5 = ".".join(income_model_names[80:])
+    model_str1 = ".".join(income_model_names)
     numdata = 25
     sample_num = 10000
 
     run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str1} fw {fns} {numdata} income")
-    print("first 20 done")
-    run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str2} fw {fns} {numdata} income")
-    print("first 40 done")
-    run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str3} fw {fns} {numdata} income")
-    print("first 60 done")
-    run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str4} fw {fns} {numdata} income")
-    print("first 80 done")
-    run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str5} fw {fns} {numdata} income")
 
     optimize_time = time.perf_counter()
 
