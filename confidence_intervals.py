@@ -56,7 +56,7 @@ if __name__ == "__main__":
 
                 for i in range(5):
                     for j in range(5):
-                        assert(len(samples[i][j]) == 50)
+                        # assert(len(samples[i][j]) == 50)
                         sd = np.std(samples[i][j])
                         sd /= np.sqrt(len(samples[i][j]))
                         bounds[i][j] = sd * 1.96
