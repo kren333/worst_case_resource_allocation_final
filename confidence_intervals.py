@@ -28,7 +28,7 @@ if __name__ == "__main__":
                 bounds = [[None for _ in range(len(loss_fns))] for _ in range(len(loss_fns))]
                 for model_state in states:
                     model_path = f"{model_state}_{method}_{task}"
-                    with open(f"{mainpath}/{model_path}_optimized_35000_40_40/final_results.pickle", 'rb') as handle:
+                    with open(f"{mainpath}/{model_path}_optimized_10000_25_25/final_results.pickle", 'rb') as handle:
                         grid = pickle.load(handle)
                     assert(grid.shape == (5,5))
 

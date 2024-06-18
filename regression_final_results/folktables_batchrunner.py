@@ -59,8 +59,8 @@ if __name__ == "__main__":
     model_str3 = ".".join(income_model_names[40:60])
     model_str4 = ".".join(income_model_names[60:80])
     model_str5 = ".".join(income_model_names[80:])
-    numdata = 40
-    sample_num = 35000
+    numdata = 25
+    sample_num = 10000
 
     run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str1} fw {fns} {numdata} income")
     print("first 20 done")

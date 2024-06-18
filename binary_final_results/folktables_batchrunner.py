@@ -55,9 +55,9 @@ if __name__ == "__main__":
             income_model_names.append("{}_{}_income".format(state, method))
     fns = "acc.skim.knapsack.fair.ce"
 
-    sample_size = 40
-    numdata = 40
-    sample_num = 35000
+    sample_size = 25
+    numdata = 25
+    sample_num = 10000
 
     models1 = ".".join(employment_model_names[:36])
     models2 = ".".join(employment_model_names[36:])
