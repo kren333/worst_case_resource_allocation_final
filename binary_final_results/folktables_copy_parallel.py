@@ -764,7 +764,7 @@ if __name__ == "__main__":
     print(len(high_level_args))
     results = []
     with ProcessPoolExecutor() as pool: # parallelize high-level optimization over models
-        results = pool.map(partial(high_level_parallel, weights_over_models, final_losses_over_models, test_data, states, optimizer, setting, sample_size), high_level_args)
+        results = pool.map(partial(high_level_parallel, weights_over_models, final_losses_over_models, test_data, states, optimizer, setting, sample_size, num_samples, numdata), high_level_args)
     for all_sweights, model_path in results:
         output_folder = "{}_optimized_{}_{}_{}".format(model_path, num_samples, sample_size, numdata)
         for task in all_sweights:
