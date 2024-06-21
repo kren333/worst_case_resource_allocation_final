@@ -2,7 +2,7 @@ conda create -n SPODR python=3.9
 source activate base
 conda activate SPODR
 
-pip install numpy
+pip install numpy=1.23
 pip install torch
 pip install folktables
 pip install matplotlib
