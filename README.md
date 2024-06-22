@@ -6,6 +6,12 @@ This is the official code for our paper, "Decision-Focused Evaluation of Worst-C
 
 [TODO add the link to the arxiv]
 
+_Note_: The full experiments are fairly involved and may take several days to finish running. To run a simplified version of our experiments (5 states, 20 individuals per optimization instance, 10,000 samples per iteration of the Frank-Wolfe algorithm) please switch to the `mini` branch via
+
+```
+git checkout origin/mini
+```
+
 ## Installing Dependencies
 
 To create a Conda environment with all dependencies installed, simply run
@@ -14,7 +20,7 @@ To create a Conda environment with all dependencies installed, simply run
 source install.sh
 ```
 
-The environment SPODR should now be activated; if this is not the case run
+Next, in your terminal run
 
 ```
 conda activate SPODR
