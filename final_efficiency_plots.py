@@ -19,14 +19,14 @@ if __name__ == "__main__":
     final_pcts = defaultdict(list)
 
     color_map = {
-        "skim": "blue",
-        "top-k": "blue",
-        "acc": "red",
-        "knapsack": "green",
-        "fair": "lightcoral",
-        "util": "darkkhaki",
-        "ce": "darkviolet",
-        "mse": "fuchsia"
+        "skim": "#CC79A7",
+        "top-k": "#CC79A7",
+        "acc": "#D55E00",
+        "knapsack": "#0072B2",
+        "fair": "#F0E442",
+        "util": "#009E73",
+        "ce": "#56B4E9",
+        "mse": "#E69F00"
     }
 
     # go through each experiment folder and plot efficiency results on top of each other

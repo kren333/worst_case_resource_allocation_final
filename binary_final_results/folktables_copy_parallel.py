@@ -488,7 +488,7 @@ def parallelize_state_model_pair(i):
     print("{} {} done".format(model_path, state))
     return final_weights, all_losses, weights_history, model_path, state
 
-def high_level_parallel(weights_over_models, final_losses_over_models, test_data, states, optimizer, setting, sample_size, num_samples, tasks, i):
+def high_level_parallel(weights_over_models, final_losses_over_models, test_data, states, optimizer, setting, sample_size, num_samples, numdata, tasks, i):
     model, model_path = i
     n2 = len(states)
     task_name_order = tasks
@@ -632,7 +632,7 @@ def high_level_parallel(weights_over_models, final_losses_over_models, test_data
     return all_sweights, model_path # TODO figure out how to integrate this into a test_converged_weights_{task}.pickle file
 
 if __name__ == "__main__":
-    states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
+    states = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"][:5]
 
     # argument parsing
     parser = argparse.ArgumentParser()
@@ -764,7 +764,7 @@ if __name__ == "__main__":
     print(len(high_level_args))
     results = []
     with ProcessPoolExecutor() as pool: # parallelize high-level optimization over models
-        results = pool.map(partial(high_level_parallel, weights_over_models, final_losses_over_models, test_data, states, optimizer, setting, sample_size), high_level_args)
+        results = pool.map(partial(high_level_parallel, weights_over_models, final_losses_over_models, test_data, states, optimizer, setting, sample_size, num_samples, numdata, tasks), high_level_args)
     for all_sweights, model_path in results:
         output_folder = "{}_optimized_{}_{}_{}".format(model_path, num_samples, sample_size, numdata)
         for task in all_sweights:
