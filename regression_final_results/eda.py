@@ -71,7 +71,7 @@ class NeuralNetworkIncome(nn.Module):
 if __name__ == "__main__":
     # load in cached weights
     setting = "income"
-    numdata = 25
+    numdata = 40
     loss_fns = ["mse", "top-k", "knapsack", "util", "fair"]
 
     # load in data
@@ -108,7 +108,7 @@ if __name__ == "__main__":
         model_path = f"{model_state}_{model_type}_{setting}"
         worst_weights = {}
         for loss_fn in loss_fns:
-            with open(f"{model_path}_optimized_10000_{numdata}_{numdata}/test_converged_weights_{loss_fn}.pickle", 'rb') as handle:
+            with open(f"{model_path}_optimized_35000_{numdata}_{numdata}/test_converged_weights_{loss_fn}.pickle", 'rb') as handle:
                 worst_weights[loss_fn] = pickle.load(handle)
         model = torch.load("{}/{}.pt".format(model_path, model_path))
 

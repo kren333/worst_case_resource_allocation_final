@@ -55,8 +55,8 @@ if __name__ == "__main__":
     fns = "knapsack.top-k.util.fair.mse"
 
     model_str1 = ".".join(income_model_names)
-    numdata = 25
-    sample_num = 10000
+    numdata = 40
+    sample_num = 35000
 
     run_single_experiment(f"python folktables_copy_parallel.py {numdata} {sample_num} {model_str1} fw {fns} {numdata} income")
 
