@@ -4,7 +4,7 @@
 
 This repository is the official implementation of the paper "Decision-Focused Evaluation of Worst-Case Distribution Shift" (UAI 2024). If you find this repository useful or use this code in your research, please cite the following paper:
 
-[TODO add the link to the arxiv]
+[TODO add bibtex citation]
 
 _Note_: To run a simplified version of our experiments (5 states, 25 individuals per optimization instance, 10,000 samples per iteration of the Frank-Wolfe algorithm) please switch to the `mini` branch via the following command
 
