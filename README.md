@@ -52,7 +52,7 @@ The process of reusing the pretrained predictive models can also be accomplished
 
 ### Running All Experiments
 
-To run all experiments, run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below). The output results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
+To run all experiments, run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below). The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
 
 <!-- ### Experiment Running
 
@@ -62,14 +62,11 @@ After the above scripts have been run, the following command will run all experi
 ./run_all.sh
 ```
 
-The final figures in the paper (TODO: list figures) should be located within the `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` folders. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance.
+The final figures in the paper (TODO: list figures) will be located within the `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` folders. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance.
 
+### Running Individual Experiments
 
-Read below for a more detailed description of each of the subtasks involved in our experiments, should you decide to run experiments one-at-a-time *as opposed* to simply running run_all.sh.
-
-#### Running Individual Experiments
-
-The following commands (which can be run in any order) will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
+Should you decide to run experiments one-at-a-time *as opposed* to simply running run_all.sh, run the following commands. The provided commands (which can be run in any order) will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
 
 ```
 ./binary_experiments.sh
