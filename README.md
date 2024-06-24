@@ -26,6 +26,8 @@ conda activate SPODR
 
 <!-- ### Predictive Model Training -->
 
+### Setup 
+
 To use the provided model checkpoints, unzip them in the proper directories using the following command:
 
 ```
@@ -50,7 +52,7 @@ The process of reusing the pretrained predictive models can also be accomplished
 ./move_models.sh
 ``` -->
 
-### Running All Experiments
+### Quick Experiments
 
 To run all experiments, run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below). The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
 
