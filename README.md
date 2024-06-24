@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository is the official implementation of Decision-Focused Evaluation of Worst-Case Distribution Shift (UAI 2024), containing code to implement our method and perform experiments. If you find this repository useful or use this code in your research, please cite the following paper:
+This repository is the official implementation of the paper "Decision-Focused Evaluation of Worst-Case Distribution Shift" (UAI 2024). If you find this repository useful or use this code in your research, please cite the following paper:
 
 [TODO add the link to the arxiv]
 
@@ -26,7 +26,7 @@ conda activate SPODR
 
 <!-- ### Predictive Model Training -->
 
-To use the provided checkpoints for our trained models, unzip them in the proper directories using the following command:
+To use the provided model checkpoints, unzip them in the proper directories using the following command:
 
 ```
 ./move_models.sh
