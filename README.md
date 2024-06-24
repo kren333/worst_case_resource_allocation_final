@@ -73,7 +73,7 @@ Should you decide to run experiments one-at-a-time *as opposed* to simply runnin
 ./regression_experiments.sh
 ```
 
-Once these have successfully run, the following command will create our final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT:
+Once these have successfully run, the following command to obtain final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT:
 
 ```
 ./final_experiments.sh
