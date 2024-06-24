@@ -26,7 +26,7 @@ conda activate SPODR
 
 <!-- ### Predictive Model Training -->
 
-### Setup 
+### Initial Setup 
 
 To use the provided model checkpoints, unzip them in the proper directories using the following command:
 
