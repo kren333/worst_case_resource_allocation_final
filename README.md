@@ -6,7 +6,7 @@ This repository is the official implementation of Decision-Focused Evaluation of
 
 [TODO add the link to the arxiv]
 
-Note: To run a simplified version of our experiments (5 states, 25 individuals per optimization instance, 10,000 samples per iteration of the Frank-Wolfe algorithm) please switch to the `mini` branch via the following command
+_Note_: To run a simplified version of our experiments (5 states, 25 individuals per optimization instance, 10,000 samples per iteration of the Frank-Wolfe algorithm) please switch to the `mini` branch via the following command
 
 ```
 git checkout origin/mini
@@ -26,7 +26,7 @@ conda activate SPODR
 
 <!-- ### Predictive Model Training -->
 
-To use the provided checkpoints for our trained models, place and unzip them in the proper directories using the following command:
+To use the provided checkpoints for our trained models, unzip them in the proper directories using the following command:
 
 ```
 ./move_models.sh
@@ -50,7 +50,9 @@ The process of reusing the pretrained predictive models can also be accomplished
 ./move_models.sh
 ``` -->
 
-To run all experiments, run the following command. The output results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
+### Running All Experiments
+
+To run all experiments, run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below). The output results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
 
 <!-- ### Experiment Running
 
@@ -65,20 +67,29 @@ The final figures in the paper (TODO: list figures) should be located within the
 
 Read below for a more detailed description of each of the subtasks involved in our experiments, should you decide to run experiments one-at-a-time *as opposed* to simply running run_all.sh.
 
-#### Individual Experiments
+#### Running Individual Experiments
 
-Once the models have been run, the following commands (which can be run in any order) will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
+The following commands (which can be run in any order) will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
 
 ```
 ./binary_experiments.sh
 ./regression_experiments.sh
 ```
 
-Once these have successfully run, the following will create our final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT:
+Once these have successfully run, the following command will create our final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT:
 
 ```
 ./final_experiments.sh
 ```
 
 <!-- The final diagrams seen in the paper should be located within the folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` (this contains visualizations, for each worst-case distribution, of the model predictions and converged weights assigned to individuals within the corresponding optimization instance). -->
+
+## License 
+
+This repository is licensed under the terms of the [MIT License](TODO: Insert link to license).
+
+## Questions?
+
+For more details, refer to the accompanying paper: [Decision-Focused Evaluation of Worst-Case Distribution Shift](TODO: Insert arxiv link). 
+If you have questions, please feel free to reach us at kevinren@cs.cmu.edu or to open an issue.
 
