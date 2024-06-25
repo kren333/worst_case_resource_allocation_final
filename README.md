@@ -28,7 +28,7 @@ conda activate SPODR
 
 ### Initial Setup 
 
-To use the provided model checkpoints, unzip them in the proper directories using the following command. To train the models from scratch instead, skip down this step.
+To use the provided model checkpoints, unzip them in the proper directories using the following command. To train the models from scratch instead, skip this step.
 
 ```
 ./move_models.sh
@@ -56,20 +56,24 @@ The process of reusing the pretrained predictive models can also be accomplished
 
 ### Quick Experiments
 
-To run all experiments, run the following command. 
+To run all experiments and reproduce our results (TODO: list Figures), run the following commands:
 <!-- (To run experiments _individually_, skip to the "Running Individual Experiments" section below).  -->
 
 <!-- run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT): -->
 
 ```
 ./run_all.sh
-```
-
-To obtain final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT, run the following command. The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance (TODO: list figures).
-
-```
 ./final_experiments.sh
 ```
+
+The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance.
+
+
+<!-- To obtain final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT, run the following command. The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance (TODO: list figures). -->
+
+<!-- ```
+./final_experiments.sh
+``` -->
 
 
 <!-- To run all low-level experiments (identifying worst-case distributions w.r.t. all combinations of predictive model, optimization instance, and metric, along with Pyomo/IPOPT comparison), run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below; note that _only one of the Quick Experiments and Individual Experiments Sections should be run, not both_). -->
