@@ -39,7 +39,7 @@ This can also be done manually:
 - Move the `binary_final_results_models.zip` into the `binary_final_results` folder and unzip
 - Move the `regression_final_results_models.zip` into the `regression_final_results` folder and unzip
 
-To train the models from scratch, comment out `--no_train` in the `binary_experiments.sh` and `regression_experiments.sh` files. *If training from scratch, do **not** run `move_models.sh`*.
+To train the models from scratch, comment out `--no_train` in the `binary_experiments.sh` and `regression_experiments.sh` files. *If training from scratch, do **not** run* `move_models.sh`.
 
 <!-- To replicate our experiments, all trained predictive models must be placed and unzipped in the proper directories. This can either be done by training them directly by commenting out `--no_train` in the `binary_experiments.sh` and `regression_experiments.sh` files, or using the provided zip files in the root directory. To exercise the second option, run the procedure below. Otherwise (training predictive models from scratch), skip this step.
 
