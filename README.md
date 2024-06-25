@@ -54,7 +54,7 @@ The process of reusing the pretrained predictive models can also be accomplished
 
 ### Quick Experiments
 
-To run all low-level experiments (identifying worst-case distributions w.r.t. all combinations of predictive model, optimization instance, and metric, along with Pyomo/IPOPT comparison), run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below).
+To run all low-level experiments (identifying worst-case distributions w.r.t. all combinations of predictive model, optimization instance, and metric, along with Pyomo/IPOPT comparison), run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below; note that _only one of the Quick Experiments and Individual Experiments Sections should be run, not both_).
 
 <!-- ### Experiment Running
 
