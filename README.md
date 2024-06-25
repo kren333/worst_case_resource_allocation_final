@@ -54,7 +54,7 @@ The process of reusing the pretrained predictive models can also be accomplished
 
 ### Quick Experiments
 
-To run all experiments, run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below). The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
+To run all low-level experiments (identifying worst-case distributions w.r.t. all combinations of predictive model, optimization instance, and metric, along with Pyomo/IPOPT comparison), run the following command. (To run experiments _individually_, skip to the "Running Individual Experiments" section below).
 
 <!-- ### Experiment Running
 
@@ -75,7 +75,8 @@ Should you decide to run experiments one-at-a-time *as opposed* to simply runnin
 ./regression_experiments.sh
 ```
 
-Once these have successfully run, the following command to obtain final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT:
+### High-Level Experiments
+Once either `run_all.sh` or a combination of `binary_experiments.sh` and `regression_experiments.sh` have successfully run, the following command to obtain final results with confidence intervals, along with the results of an efficiency-related experiment comparing our method to Pyomo/IPOPT. The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory:
 
 ```
 ./final_experiments.sh
