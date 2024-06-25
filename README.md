@@ -90,5 +90,5 @@ This repository is licensed under the terms of the [MIT License](TODO: Insert li
 ## Questions?
 
 For more details, refer to the accompanying paper: [Decision-Focused Evaluation of Worst-Case Distribution Shift](TODO: Insert arxiv link). 
-If you have questions, please feel free to reach us at kevinren@cs.cmu.edu or to open an issue.
+If you have questions, please feel free to reach us at kevinren@andrew.cmu.edu or to open an issue.
 
