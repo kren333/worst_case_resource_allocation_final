@@ -56,7 +56,7 @@ The process of reusing the pretrained predictive models can also be accomplished
 
 ### Quick Experiments
 
-To run all experiments and reproduce our results (TODO: list Figures), run the following command. The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory. 
+To run all experiments and reproduce our results (Figures 1, 2, 3, 4), run the following command. The results will be placed inside folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` under the root directory. 
 <!-- (To run experiments _individually_, skip to the "Running Individual Experiments" section below).  -->
 
 <!-- run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT): -->
