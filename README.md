@@ -64,8 +64,6 @@ After the above scripts have been run, the following command will run all experi
 ./run_all.sh
 ```
 
-The final figures in the paper (TODO: list figures) will be located within the `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` folders. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance.
-
 ### Running Individual Experiments
 
 Should you decide to run experiments one-at-a-time *as opposed* to simply running run_all.sh, run the following commands. The provided commands (which can be run in any order) will run all experiments on the binary prediction tasks (unemployment, income classification) and income regression task (identify worst-case distributions w.r.t. all loss functions, for all predictive models, compile the results, and then compare our method to Pyomo/IPOPT):
@@ -81,6 +79,8 @@ Once either `run_all.sh` or a combination of `binary_experiments.sh` and `regres
 ```
 ./final_experiments.sh
 ```
+
+The final figures in the paper (TODO: list figures) will be located within the `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` folders. This contains visualizations (for each worst-case distribution) of the model predictions and converged weights assigned to individuals within the corresponding optimization instance.
 
 <!-- The final diagrams seen in the paper should be located within the folders `_final_results_ci`, `efficiency_experiments`, and `paper_visualizations` (this contains visualizations, for each worst-case distribution, of the model predictions and converged weights assigned to individuals within the corresponding optimization instance). -->
 
